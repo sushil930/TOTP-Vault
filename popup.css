@@ -1,0 +1,177 @@
+:root {
+    --bg-color: #1c1c1e;
+    --surface-color: #2c2c2e;
+    --text-primary: #ffffff;
+    --text-secondary: #8e8e93;
+    --primary-brand: #0a84ff;
+    --border-color: #3a3a3c;
+    --danger-color: #ff453a;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    width: 360px;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+}
+
+.container {
+    padding: 20px;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+#accounts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.account-item {
+    background-color: var(--surface-color);
+    border-radius: 10px;
+    padding: 16px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.2s;
+}
+
+.account-item:hover {
+    background-color: #3a3a3c;
+}
+
+.account-details {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    flex-grow: 1;
+    cursor: pointer;
+}
+
+.account-name {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-secondary);
+}
+
+.totp-code {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--primary-brand);
+    letter-spacing: 2px;
+}
+
+.copy-feedback {
+    color: #32d74b !important;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    margin-left: 8px;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.delete-btn:hover {
+    opacity: 1;
+}
+
+.delete-btn svg {
+    width: 18px;
+    height: 18px;
+    fill: var(--text-secondary);
+}
+
+.delete-btn:hover svg {
+    fill: var(--danger-color);
+}
+
+.progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: var(--primary-brand);
+    transition: width 1s linear;
+    border-bottom-left-radius: 10px;
+}
+
+#add-account-section h2 {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+    background-color: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px;
+    color: var(--text-primary);
+    font-size: 16px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--primary-brand);
+    box-shadow: 0 0 0 3px rgba(10, 132, 255, 0.25);
+}
+
+#submit-account-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-brand);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+#submit-account-btn:hover {
+    background-color: #0a78d8;
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}

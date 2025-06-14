@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Web Auth Codes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="popup.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Web Auth Codes</h1>
+        <div id="accounts-list"></div>
+        <div id="add-account-section">
+            <h2>Add New Account</h2>
+            <div class="form-group">
+                <label for="account-name">Account Name</label>
+                <input type="text" id="account-name" placeholder="e.g., Google">
+            </div>
+            <div class="form-group">
+                <label for="totp-secret">TOTP Secret</label>
+                <input type="text" id="totp-secret" placeholder="Enter your secret key">
+            </div>
+            <button id="submit-account-btn">Add Account</button>
+        </div>
+    </div>
+    <script src="buffer.js"></script>
+    <script src="otplib.js"></script>
+    <script src="crypto.js"></script>
+    <script src="utils.js"></script>
+    <script src="popup.js"></script>
+</body>
+</html> 
