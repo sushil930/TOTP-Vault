@@ -1,4 +1,4 @@
-# ✨ Web Auth Codes ✨
+# ✨ TOTP Vault ✨
 
 A secure and simple Chrome Extension for managing your Time-based One-Time Passwords (TOTP) for 2-Factor Authentication (2FA). Never reach for your phone again!
 
